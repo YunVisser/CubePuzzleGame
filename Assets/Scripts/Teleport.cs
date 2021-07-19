@@ -4,22 +4,10 @@ using UnityEngine;
 
 public class Teleport : MonoBehaviour
 {
-    //public Direction newDir;
-
     public Transform newPos;
     public bool stopAfterTeleport = true;
     [SerializeField] private GoodSide goodSide;
-
-    //// Start is called before the first frame update
-    //void Start()
-    //{       
-    //}
-
-
-    //// Update is called once per frame
-    //void Update()
-    //{        
-    //}
+        
 
     private void OnTriggerEnter(Collider other)
     {
@@ -27,7 +15,6 @@ public class Teleport : MonoBehaviour
         {
             other.transform.position = newPos.position;
             
-
             CharController player = other.GetComponent<CharController>();
 
             if (stopAfterTeleport)
@@ -35,31 +22,7 @@ public class Teleport : MonoBehaviour
                 player.cubeDirection = Vector3.zero;
                 player.hasHitWall = true;  //zodra de player de muur heeft aangeraakt kan de player weer lopen 
                 return;
-            }
-
-            //switch (newDir)
-            //{
-            //    case Direction.up:
-            //        player.cubeDirection = Vector3.up;
-            //        break;
-            //    case Direction.down:
-            //        player.cubeDirection = Vector3.down;
-            //        break; 
-            //    case Direction.left:
-            //        player.cubeDirection = Vector3.left;
-            //        break;
-            //    case Direction.right:
-            //        player.cubeDirection = Vector3.right;
-            //        break;
-            //    case Direction.forward:
-            //        player.cubeDirection = Vector3.forward;
-            //        break;
-            //    case Direction.backward:
-            //        player.cubeDirection = Vector3.back;
-            //        break;
-            //    default:
-            //        break;
-            //}
+            }            
         }
     }
 
@@ -97,13 +60,3 @@ public class Teleport : MonoBehaviour
         return false;
     }
 }
-
-//public enum Direction
-//{
-//    up,
-//    down,
-//    left,
-//    right,
-//    forward,
-//    backward
-//}

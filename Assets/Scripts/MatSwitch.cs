@@ -81,8 +81,8 @@ public class MatSwitch : MonoBehaviour
         //als de code hier is dan heeft de player niet de goede kant geraakt
         return false;
     }
-
 }
+
 public enum GoodSide
 {
     up,

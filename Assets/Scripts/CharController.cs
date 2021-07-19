@@ -10,22 +10,16 @@ public class CharController : MonoBehaviour
     public float speed = 1f;
     public int maxMoves = 5;
 
-    //public float maxSpeed; //y movement code
-    //private Vector3 startPosition; //y movement code
     private Rigidbody rb;
     [HideInInspector] public Vector3 cubeDirection = Vector3.zero;
 
     public bool hasHitWall = true;
     public bool hitUp, hitDown, hitLeft, hitRight, hitForward, hitBackwards;
 
-    
 
     // Start is called before the first frame update
     void Start()
     {
-        //maxSpeed = 3;
-       //startPosition = transform.position;
-
         // Get
         rb = GetComponent<Rigidbody>();
     }
@@ -46,7 +40,6 @@ public class CharController : MonoBehaviour
         {
             GameManager.lastLevel = SceneManager.GetActiveScene().buildIndex;
             SceneManager.LoadScene("TryAgain");
-
         }
 
     }
@@ -98,8 +91,7 @@ public class CharController : MonoBehaviour
                 hasHitWall = false;
             }
         }
-
-        rb.MovePosition(transform.position + cubeDirection * speed * Time.fixedDeltaTime);
+        rb.MovePosition(transform.position + (cubeDirection * speed * Time.fixedDeltaTime));
     }
 
     private void CubeRaycasts()

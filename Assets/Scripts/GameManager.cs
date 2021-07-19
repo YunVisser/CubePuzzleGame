@@ -41,22 +41,5 @@ public class GameManager : MonoBehaviour
         {
             StartGame();
         }
-    }
-
-    //public void EndGame()
-    //{
-    //    SceneManager.LoadScene(2); //scene starten
-    //}
-
-    //public void IncreaseScore()
-    //{
-    //    score++;
-    //    scoreText.text = "Score: " + score.ToString();
-
-    //    if (score > GetHighScore())
-    //    {
-    //        PlayerPrefs.SetInt("Highscore", score);
-    //        highscoreText.text = "High score: " + score.ToString();
-    //    }
-    //}
+    }   
 }

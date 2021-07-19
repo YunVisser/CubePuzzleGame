@@ -15,7 +15,6 @@ public class Score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        scoreText.text = "Je hebt nog " + player.maxMoves.ToString() + " kans(en)";
-
+        scoreText.text = "You still have " + player.maxMoves.ToString() + " move(s)";
     }
 }
